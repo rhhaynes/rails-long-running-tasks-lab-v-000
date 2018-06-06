@@ -6,7 +6,7 @@ class SongsController < ApplicationController
   end
   
   def upload
-    CSV.foreach(params[:songs].path, headers: true) do |song|
+    CSV.foreach(params[:songs], headers: true) do |song|
       binding.pry
       Song.create(:title => song[0]).tap{|s| s.artist.build(:name => song[1])}
     end

@@ -7,7 +7,7 @@ class SongsController < ApplicationController
   
   def upload
     binding.pry
-    CSV.foreach('', headers: true) do |song|
+    CSV.foreach(Rails.root.join('db',''), headers: true) do |song|
       binding.pry
       Song.create(:title => song[0]).tap{|s| s.artist.build(:name => song[1])}
     end

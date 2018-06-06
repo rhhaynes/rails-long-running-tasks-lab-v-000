@@ -7,7 +7,9 @@ class SongsController < ApplicationController
   
   def upload
     CSV.foreach(Rails.root.join('db','songs.csv'), headers: true) do |song|
-      Song.new(:title => song[0]).tap{|s| s.artist.find_or_create_by(:name => song[1])}.save
+      song = Song.new(:title => song[0])
+      song.artist.find_or_create_by(:name => song[1])
+      song.save
     end
     redirect_to songs_path
   end

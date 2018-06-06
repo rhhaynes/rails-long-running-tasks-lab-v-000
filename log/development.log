@@ -2278,3 +2278,12 @@ NoMethodError (undefined method `name=' for nil:NilClass):
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.1ms)
+
+
+Started POST "/songs/upload" for 73.99.9.74 at 2018-06-06 18:37:28 +0000
+Cannot render console from 73.99.9.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#upload as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nXvGCGKv6WcgElfW6xTxD8Naik9+x6Lp8vmG4wHeR2TqVCtkk8y8GAYuxnnn/QMOuYT/8kS+2vBZyV/pHe5jqQ==", "commit"=>"Import Songs"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Caught Up in You"], ["created_at", "2018-06-06 18:37:28.532040"], ["updated_at", "2018-06-06 18:37:28.532040"]]
+  [1m[35m (2.8ms)[0m  commit transaction

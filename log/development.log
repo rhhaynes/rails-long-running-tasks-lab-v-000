@@ -2198,3 +2198,10 @@ NoMethodError (undefined method `path' for nil:NilClass):
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.7ms)
+
+
+Started POST "/songs/upload" for 73.99.9.74 at 2018-06-06 18:26:52 +0000
+Cannot render console from 73.99.9.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SongsController#upload as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kXyq5rRBM0OeQnCTYyEBS5X8ZNrB34IbqYGb7OQZwMfmU0eKRSJmPLh+4TxvyPNK7yIRZ/um+gICsULm+CnkCg==", "commit"=>"Import Songs"}

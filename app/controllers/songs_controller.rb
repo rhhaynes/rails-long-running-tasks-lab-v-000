@@ -7,7 +7,7 @@ class SongsController < ApplicationController
   
   def upload
     CSV.foreach(Rails.root.join('db','songs.csv'), headers: true) do |song|
-      Song.create(:title => song[0]).tap{|s| s.artist.name = song[1]}
+      Song.create(:title => song[0]).tap{|s| s.build_artist(:name => song[1])}
     end
     redirect_to songs_path
   end

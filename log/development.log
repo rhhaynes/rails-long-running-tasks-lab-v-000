@@ -9026,3 +9026,14 @@ Started POST "/songs/upload" for 73.99.9.74 at 2018-06-06 18:46:18 +0000
 Cannot render console from 73.99.9.74! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by SongsController#upload as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"s1M6ujf+VduSB0NYJv+Vvv7F8lhlfYBvqtIH+rMctFLEfNfWxp0ApLQ70vcqFme/hBuH5V8E+HYB4t7wryyQnw==", "commit"=>"Import Songs"}
+Completed 500 Internal Server Error in 140878ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `find_or_create_by' for nil:NilClass):
+  app/controllers/songs_controller.rb:12:in `block in upload'
+  app/controllers/songs_controller.rb:9:in `upload'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.7ms)
